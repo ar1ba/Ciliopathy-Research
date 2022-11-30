@@ -1,0 +1,156 @@
+% This is annote.bib
+% Author: Ayman Ammoura
+% A demo for CMPUT 603 Fall 2002.
+% The order of the following entries is irrelevant. They will be sorted according to the
+% bibliography style used.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+@ARTICLE{Armand21,
+  author    = {Ethan J. Armand and Junhao Li and Fangming Xie and Chongyuan Luo},
+  title     = {Single-Cell Sequencing of Brain Cell Transcriptomes and Epigenomes},
+  journal   = {Neuron},
+  year      = {2021},
+  volume    = {109},
+  number    = {1},
+  pages     = {11-26},
+  month     = {Jan},
+  annote    = { Armand, et al.,  discusses the overall process and applications of single-cell sequencing in neuroscience research. scRNA-seq technology measures RNA from individual cells without the need for selective cell purification. These techniques can be summarized by three characteristics: scope (number of cells), granularity (number of genes or epigenetic features), and spatial resolution. scRNAseq has a special application in neuroscience as it helps characterize cellular types and markers of neural circuits. Methods for the physical separation of individual cells can be done using plate-based or droplet-based sorting methods. Droplet-based scRNA-seq is more efficient due to the small reaction volume and ability to rapidly process thousands of cells in microfluidic devices. Droplet-based scRNA-seq methods count the 5’ or 3’ ends of mRNA molecules, noting unique molecular identifiers (UMIs) to avoid duplicates. In neurodevelopmental research, scRNA-seq has limits as it cannot be applied to frozen post-mortem brain tissues due to the rupturing of cell membranes in frozen temperatures. Thus, an RNA from single nuclei can be sequenced instead (snRNA-seq). Single-cell technology has been able to recognize significantly more morphologically and functionally distinct neuron types compared to traditional microscopy methods. A very useful application of scRNA-seq is lineage tracing through artificial labeling, specifically through pseudotime analysis. This paper helps emphasize why scRNA-seq is a pivotal technology for neuroscience research and how applications in lineage tracing can help me determine the disease progression across ciliopathy cell populations using pseudotime analysis.
+}
+}
+
+@ARTICLE{Chen19,
+  author    = {Geng Chen and Baitang Ning and Tieliu Shi},
+  title     = {Single-Cell RNA-Seq Technologies and Related Computational Data Analysis},
+  journal   = {Frontiers in Genetics},
+  year      = {2019},
+  volume    = {10},
+  number    = {317},
+  month     = {April},
+  annote    = {Chen, et al., further explores the computational data analysis techniques behind scRNA-seq technology. They acknowledge that due to technical limitations and biological factors, scRNA-seq data are more complex than bulk RNA-seq data, thus the large variability of scRNA-seq data brings challenges in data analysis. Many different data analysis methods are being created but they must ensure accuracy and reproducibility of results. They go into all of the methods for diverse scRNA-seq data analyses including quality control, read mapping, gene expression quantification, batch effect correction, normalization, imputation, dimensionality reduction, feature selection, cell clustering, trajectory inference, differential expression calling, alternative splicing, allelic expression, and gene regulatory network reconstruction. Lastly, they offer an outlook onto the future of development and applications of scRNA-seq technologies. This review gives me a framework to conduct my own data analysis on scRNAdata related to ciliopathy genes. }
+}
+
+@ARTICLE{Nomura20,
+  author    = {Seitaro Nomura},
+  title     = {Single-cell genomics to understand disease pathogenesis},
+  journal   = {Journal of Human Genetics},
+  year      = {2020},
+  volume    = {66},
+  pages    = {75-84},
+  month     = {September},
+  annote    = {In this review, Nomura writes about the applications of single-cell genomics in understanding disease pathogenesis. Specifically, he looks at the application of single-cell technology to understand the biology of heart failure, specifically looking at how each cardiomyocyte responds to various stimuli at the single-cell level. Methods used include trajectory inference, marker identification, spatial analysis, and clinical assessment. He also talks about applications in spatial single-cell omics, cell-cell communication, and immunoprofiling. This review provides a framework of how to apply single-cell data to better understand disease pathogenesis, which can be applied to my research project’s objective in understanding ciliopathy mechanisms.}
+}
+
+
+@ARTICLE{Jiang22,
+  author    = {Ruochen Jiang and Tianyi Sun and Dongyuan Song and Jessica Li},
+  title     = {Statistics or biology: the zero-inflation controversy about scRNA-seq data},
+  journal   = {Genome Biology},
+  year      = {2022},
+  volume    = {23},
+  number    = {31},
+  month     = {January},
+  annote    = {Jiang, et al., analyze the challenge of zero-inflation in scRNA-seq data and how to go about processing and interpreting such data from a statistical and biological perspective. Essentially, there is a vastly high proportion of genes with zero expression measurements in each cell, which causes the dataset to much more sparse in scRNAseq data rather than bulk RNA-seq data. While the proportion of zeros in bulk RNA-seq data is usually 10–40\% [41, 42], that proportion can be as high as 90\% in scRNA-seq data. Excess zeros can bias the estimation of gene expression correlations  and hinder the capture of gene expression dynamics from the data. Zero-inflation is regarded differently by different researchers–some regard zeros as biological signals representing no or low gene expression, while others regard zeros as missing data to be corrected. Jiang, et al., discuss different sources of biological and non-biological zeroes and introduce five mechanisms of adding non-biological zeros in computational benchmarking.
+}
+}
+
+@ARTICLE{Koki20,
+  author    = {Koki Tsuyuzaki and Hiroyuki Sato and Kenta Sato and Itoshi Nikaido},
+  title     = {Benchmarking principal component analysis for large-scale single-cell RNA-sequencing},
+  journal   = {Genome Biology},
+  year      = {2020},
+  volume    = {21},
+  number    = {9},
+  month     = {January},
+  annote    = {Tsuyuzaki, et al., discuss various PCA algorithms and implementations and their applications to large scRNAseq datasets. They note that the analysis of scRNA-seq datasets poses a potentially difficult problem; the cell type corresponding to each data point is unknown a priori. In result, researchers perform unsupervised machine learning (UML) methods, such as PCA and clustering, to reveal the cell type corresponding to each individual data point. Still, Tsuyuzaki, et al., notes how it is still unclear how PCA should be conducted for large-scale scRNA-seq. This is because PCA algorithms and implementations load all elements of a data matrix into memory space, for large-scale datasets so the calculation is difficult unless the memory size of the user’s machine is very large. To address this, the study team tested different data formats such as CSV, Zstd, Loop, and HDF5, and evaluated calculation time and memory usage. They noted that for some general algorithms, loading of sparse matrices enhances performance but specifically in terms of using sparse matrices to accelerate PCA with scRNA-seq datasets, there is no obvious improvement as scRNA-seq datasets are not particularly sparse. They conclude the review with benchmarked guidelines for users to decide what software and tool to conduct PCA with given on programming language and matrix size. This is key information in terms of designing a scRNA-seq analysis study.
+}
+}
+
+
+
+@ARTICLE{Abbas2020,
+  author    = {Mostafa Abbas and Yasser El-manzalawy},
+  title     = {Machine learning based refined differential gene expression analysis of pediatric sepsis},
+  journal   = {BMC Medical Genomics},
+  year      = {2020},
+  volume    = {12},
+  number    = {122},
+  month     = {August},
+  annote    = {Abbas and El-Manzalawy highlight novel statistical and machine learning methods used to optimize precision in identifying cellular markers using differential expression (DE) analysis of transcriptomic data. These methods were done via re-ranking and prioritizing genes post-DE analysis with supervised feature selection methods for selecting optimal genes with the most relevance in predicting target variables while also achieving minimal redundancy. Then machine learning classification was used to assess the discriminatory power of selected genes. DE analysis was conducted by calculating the fold-change with respect to non-survival followed by a Benjamini-Hochberg correction method. Then machine learning classification was done using Random Forest, eXtreme Gradient boosting, and Logistic Regression. Feature selection used Random Forest Feature Importance and Minimum Redundancy and Maximum Relevance. Overall marker gene discovery was assessed by measuring Accuracy (ACC), Sensitivity (Sn). Specificity (Sp), Matthews correlation coefficient (MCC) and Area under ROC curve (AUC). This paper offers valuable insights into the overall statistical workflow used to assess the most relevant genes in a sample to determine the most appropriate cellular markers. My specific independent study will look closer into the different machine learning and statistical methods used and decide which ones are most suited for discovering ciliary gene markers. 
+}
+}
+
+@ARTICLE{Gagnos22,
+  author    = {Jake Gagnon and Lira Pi and MAtthew Ryals and Gingwen Wan},
+  title     = {Recommendations of scRNA-seq Differential Gene Expression Analysis Based on Comprehensive Benchmarking},
+  journal   = {National Center for Biotechnology Information},
+  year      = {2022},
+  volume    = {12},
+  number    = {6},
+  month     = {June},
+  annote    ={Gagnon, et al., develops a methodology to benchmark various differential gene expression analysis methods while accounting for sources of variation within a multi-subject and multi-condition scRNA-seq experiment. This includes cell-to-cell variation within a subject, the variation across subjects, the variability across cell types, the mean/variance relationship of gene expression across genes, library size effects, group effects, and covariate effects. After simulating various different scenarios within cell types, fold-change rank, and filtering strategies, they find that DEG methods following negative binomial mixed models outperform pseudo-bulk DEG methods on average. This source serves as a guideline for researchers to select the proper tools and parameters in DEG scRNA-seq data analysis. }
+  }
+
+  @ARTICLE{Becht18,
+  author    = {Etienne Becht and Leland McInnes and John Healy},
+  title     = {Dimensionality reduction for visualizing single-cell data using UMAP},
+  journal   = {Nature Biotechnology},
+  year      = {2019},
+  volume    = {37},
+  page    = {38-44},
+  month     = {December},
+  annote    = {Becht, et al., discuss a preference for uniform manifold approximation and projection (UMAP) for non-linear dimensionality reduction due to its high efficiency, reproducibility, and meaningful organization of cell clusters. Nonlinear dimensionality reduction methods are becoming more meaningful for cell type clustering analysis as it is able to avoid overcrowding of representation, in comparison to typical linear methods (PCA). This paper compares both UMAP and another non-linear method, tSNE, and concluded that UMAP is able to better represent typical multi-branches continuous trajectories of cellular phenotypes and development. UMAP in combination with some sort of community detection algorithm, usually by default the Louvain algorithm, is able to iteratively group similar cells together. From here, we can determine the most differentially expressed genes in each cluster and match them to known cell markers to annotate cell type. This step is crucial in knowing what cell populations are mostly represented in our scRNA samples.
+}
+}
+
+ @ARTICLE{Campbell16,
+  author    = {Kieran Campbell and Christopher Yau},
+  title     = {Order Under Uncertainty: Robust Differential Expression Analysis Using Probabilistic Models for Pseudotime Inference},
+  journal   = {PLOS Computational Biology},
+  year      = {2016},
+  month     = {November},
+  annote    = {Campbell and Yau discuss the exciting application of scRNA-sequencing in the ability to quantify cell differentiation through trajectory inference. This is typically done using computational methods to label each cell with a “pseudotime”. Due to the high variability in gene expression with a cell, there is a large amount of uncertainty in the preciseness of ordering of cells by differentiation processes. This paper suggests probabilistic modeling techniques to quantify this uncertainty and to include it in the trajectory inference analysis.
+}
+}
+
+ @ARTICLE{Deconinck21,
+  author    = {Louise Deconinck and Robrecht Connodt and Woulter Salens},
+  title     = {Recent advances in trajectory inference from single-cell omics data},
+  journal   = {Current Opinion in Systems Biology},
+  year      = {2021},
+  month     = {September},
+  annote    = {Deconinck, et al., review recent advances in trajectory inference (TI) from single-cell multi-omic data. TI allows researchers to study cellular dynamics, specifically development patterns, from scRNA-seq data. These methods infer a graph-like structure that maps cells to compare properties over pseudotime, an abstract unit of progress during cellular dynamic processes. General assumptions of TI include that (1) the biological process of interest is dynamic (2) the biological data are sampled to sufficient depth, allowing even very transient states to be presented; and (3) the changes in gene expression are gradual during the developmental process. Various computation approaches can be used, including dimensionality reduction, clustering, graph traversal, probabilistic methods, and RNA velocity to assist in downstream analyses including trajectory visualization, differential expression, alignment, and gene regulatory network (GRN) inference. This review outlines these different methods and the statistical models used to provide a more accurate TI result.
+}
+}
+
+ @ARTICLE{Dibella20,
+  author    = {Daniella DiBella and Ehsan Habibi and Sun-Ming Yang},
+  title     = {Recent advances in trajectory inference from single-cell omics data},
+  journal   = {BioRXiV},
+  year      = {2020},
+  annote    = {Di Bella, et al., offers a comprehensive look at mouse neocortex development and cellular diversity. The study took single-cell RNA samples everyday during embryonic corticogenesis and at early postnatal stages as well as a spatial transcriptomics time course. Using differential gene expression analysis, a diffusion pseudotime-based approach was used to inference cell differentiation trajectories after doing initial scRNA-seq pre-processing, analysis, and clustering. As a result, the reconstructed developmental trajectories assisted in the inference of spatial organization and the gene regulatory programs that influence lineage decisions. This is significantly useful because the developmental map can also pinpoint origins of lineage-specific abnormalities that are linked to diseased mice. This paper can be used as a source of gene lists and expression levels across development to crosscheck with human homolog ciliary genes to determine if any cilia specific gene mutations are more prevalent in certain developmental states or tissue layers. 
+}
+}
+
+ @ARTICLE{Inglis06,
+  author    = {Peter Inglis and Keith Boroevich and Michel Leroux},
+  title     = {Piecing Together a Ciliome},
+  journal   = {Trends in Genetics},
+  year      = {2006},
+  volume    = {22},
+  number    = {9},
+  annote    = {Inglis, et al., discusses how cilia organelle functions and related disease mechanisms, as well as provides a compiled list of identified ciliary proteins from bioinformatic, genomic, and proteomic studies. This compiled list is very useful for cross checking results of DEG analysis post scRNA-seq analysis and determining if the predictive machine learning methods used provide consistent results. This list will be used in my independent study as I start to do my own scRNA-seq analysis and marker detection workflow in these ciliary genes of interest. 
+}
+}
+
+ @ARTICLE{Reiter,
+  author    = {Jeremy Reiter and Michel Leroux},
+  title     = {Genes and molecular pathways
+underpinning ciliopathies},
+  journal   = {Nature},
+  year      = {2017},
+  volume    = {18},
+  page    = {533-547},
+  annote    = {Reiter and Leroux summarize the key stages of ciliogenesis as well as the gene markers and molecular pathways that contribute to ciliopathies. This compiled list will allow for attributing the markers determined significant after DEG analysis and classification to certain ciliopathy mechanisms. The list includes ciliopathies across the human body, so the gene list used in my analysis will include human genes and mouse homologs with the highest percent similarity to human genes.
+
+}
+}
